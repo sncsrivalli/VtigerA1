@@ -23,6 +23,7 @@ import pomPages.NewLeadDetailsPage;
 import pomPages.NewOrgDetailsPage;
 import pomPages.OrganizationsPage;
 
+//This is BaseClass
 public class BaseClass {
 
 	//@BeforeSuite
