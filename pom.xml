@@ -11,7 +11,7 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
-	<profiles>
+	<!-- 	<profiles>
 
 		<profile>
 			<id>mvnPractice</id>
@@ -86,24 +86,24 @@
 		</profile>
 
 		<profile>
-			<id>Contacts</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.2.5</version>
-						<configuration>
-							<suiteXmlFiles>
-								<suiteXmlFile>contactTests.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+			<id>Contacts</id> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>contactTests.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<!--	</profile>
 		
-	</profiles>
+	</profiles> -->
 
 	<dependencies>
 		<!--
