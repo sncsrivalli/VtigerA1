@@ -1,7 +1,7 @@
 package mvnPractice;
 
 import org.testng.annotations.Test;
-
+//Sample test
 public class Test1 {
 
 	@Test
