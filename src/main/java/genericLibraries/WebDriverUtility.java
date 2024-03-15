@@ -220,8 +220,9 @@ public class WebDriverUtility {
 	 * @param driver
 	 * @param jutil
 	 * @param className
+	 * @return 
 	 */
-	public void captureScreenshot(WebDriver driver, JavaUtility jutil, String className) {
+	public String captureScreenshot(WebDriver driver, JavaUtility jutil, String className) {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
 		File dest = new File("./Screenshot/"
@@ -231,6 +232,8 @@ public class WebDriverUtility {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		return dest.getAbsolutePath();
 	}
 	
 	/**

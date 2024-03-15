@@ -3,15 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testScripts.CreateAndDeleteLeadTest">
+      <class name="mvnPractice.GetSystemPropertiesTest">
         <methods>
-          <include name="methodSetup"/>
-          <include name="classSetup"/>
-          <include name="methodTeardown"/>
-          <include name="classTeardown"/>
-          <include name="createAndDeleteLeadTest"/>
+          <include name="demo"/>
         </methods>
-      </class> <!-- testScripts.CreateAndDeleteLeadTest -->
+      </class> <!-- mvnPractice.GetSystemPropertiesTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

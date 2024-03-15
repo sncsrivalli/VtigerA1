@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="testScripts.CreateContactTest"/>
-      <class name="testScripts.CreateContactWithExistingOrgTest"/>
-      <class name="testScripts.CreateOrgWithTypeAndIndustryTest"/>
-      <class name="testScripts.CreateAndDeleteLeadTest"/>
-      <class name="testScripts.CreateEventTest"/>
-      <class name="testScripts.CreateLeadTest"/>
-      <class name="testScripts.CreateAndDuplicateLeadTest"/>
-      <class name="testScripts.CreateOrgTest"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<listeners>
+		<listener class-name="genericLibraries.ListenerImplementation"></listener>
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="testScripts.CreateContactTest" />
+			<class name="testScripts.CreateContactWithExistingOrgTest" />
+			<class name="testScripts.CreateOrgWithTypeAndIndustryTest" />
+			<class name="testScripts.CreateAndDeleteLeadTest" />
+			<class name="testScripts.CreateEventTest" />
+			<class name="testScripts.CreateLeadTest" />
+			<class name="testScripts.CreateAndDuplicateLeadTest" />
+			<class name="testScripts.CreateOrgTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

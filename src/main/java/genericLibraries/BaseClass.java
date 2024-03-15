@@ -37,6 +37,9 @@ public class BaseClass {
 	protected WebDriver driver;
 	protected SoftAssert soft;
 	
+	public static WebDriver sdriver;
+	public static JavaUtility sjutil;
+	
 	protected LoginPage login;
 	protected HomePage home;
 	protected OrganizationsPage org;
@@ -60,8 +63,12 @@ public class BaseClass {
 		web = new WebDriverUtility();
 		jutil = new JavaUtility();
 		
+		sjutil = jutil;
+		
 		property.propertiesInit(IConstantPath.PROPERTIES_PATH);
 		driver = web.launchBrowserAndMaximize(property.readFromProperties("browser"));
+		
+		sdriver = driver;
 		web.waitTillElementFound(Long.parseLong(property.readFromProperties("timeouts")));
 	}
 	
