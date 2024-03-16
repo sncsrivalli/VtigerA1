@@ -68,25 +68,25 @@
 		</profile>
 
 		<profile>
-			<id>Org</id>
-			<build>
-				<plugins>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-surefire-plugin</artifactId>
-						<version>3.2.5</version>
-						<configuration>
-							<suiteXmlFiles>
-								<suiteXmlFile>orgTests.xml</suiteXmlFile>
-							</suiteXmlFiles>
-						</configuration>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
+			<id>Org</id> -->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>orgTests.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<!-- </profile>
 
 		<profile>
-			<id>Contacts</id> -->
+			<id>Contacts</id> 
 	<build>
 		<plugins>
 			<plugin>
@@ -101,7 +101,7 @@
 			</plugin>
 		</plugins>
 	</build>
-	<!--	</profile>
+		</profile>
 		
 	</profiles> -->
 
