@@ -6,11 +6,18 @@ import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import pomPages.ContactsPage;
+import pomPages.CreateNewContactPage;
+import pomPages.NewContactDetailsPage;
 
 public class CreateContactTest extends BaseClass {
 
 	@Test
 	public void createNewContactTest() throws InterruptedException {
+		ContactsPage contact = pageObjects.getContactsPage();
+		CreateNewContactPage createContact = pageObjects.getCreateContactPage();
+		NewContactDetailsPage newContact = pageObjects.getNewContactDetailsPage();
+		
 		home.clickContacts();
 		soft.assertEquals(contact.getPageHeader(), "Contacts");
 		contact.clickPlusButton();

@@ -6,11 +6,20 @@ import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import pomPages.CreateNewLeadPage;
+import pomPages.DuplicatingLeadPage;
+import pomPages.LeadsPage;
+import pomPages.NewLeadDetailsPage;
 
 public class CreateAndDuplicateLeadTest extends BaseClass {
 
 	@Test
 	public void createAndDuplicateLeadTest() throws InterruptedException {
+		LeadsPage lead = pageObjects.getLeadsPage();
+		CreateNewLeadPage createLead = pageObjects.getCreateNewLeadPage();
+		NewLeadDetailsPage newLead = pageObjects.getNewLeadDetailsPage();
+		DuplicatingLeadPage duplicateLead = pageObjects.getDuplicatingLeadPage();
+		
 		home.clickLeads();
 		soft.assertEquals(lead.getPageHeader(), "Leads");
 		lead.clickPlusButton();

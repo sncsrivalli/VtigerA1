@@ -6,11 +6,16 @@ import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import pomPages.CreateNewEventPage;
+import pomPages.NewEventDetailsPage;
 
 public class CreateEventTest extends BaseClass {
 
 	@Test
 	public void createNewEventTest() {
+		CreateNewEventPage createEvent = pageObjects.getCreateNewEventPage();
+		NewEventDetailsPage newEvent = pageObjects.getNewEventDetailsPage();
+		
 		Map<String, String> map = excel.readFromExcel("Create New Event", "EventsTestData");
 		
 		home.selectFromQuickCreate(web, map.get("Quick Create"));

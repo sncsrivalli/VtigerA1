@@ -6,11 +6,18 @@ import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
 import genericLibraries.IConstantPath;
+import pomPages.CreateNewOrganizationPage;
+import pomPages.NewOrgDetailsPage;
+import pomPages.OrganizationsPage;
 
 public class CreateOrgWithTypeAndIndustryTest extends BaseClass {
 
 	@Test
 	public void createOrgWithTypeAndIndustryTest() throws InterruptedException {
+		OrganizationsPage org = pageObjects.getOrganizationsPage();
+		CreateNewOrganizationPage createOrg = pageObjects.getCreateNewOrganizationPage();
+		NewOrgDetailsPage newOrg = pageObjects.getNewOrgDetailsPage();
+		
 		home.clickOrganizations();
 		soft.assertEquals(org.getPageHeader(), "Organizations");
 		org.clickPlusButton();

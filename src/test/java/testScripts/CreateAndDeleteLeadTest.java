@@ -5,11 +5,18 @@ import java.util.Map;
 import org.testng.annotations.Test;
 
 import genericLibraries.BaseClass;
+import pomPages.CreateNewLeadPage;
+import pomPages.LeadsPage;
+import pomPages.NewLeadDetailsPage;
 
 public class CreateAndDeleteLeadTest extends BaseClass {
 
 	@Test
 	public void createAndDeleteLeadTest() throws InterruptedException {
+		LeadsPage lead = pageObjects.getLeadsPage();
+		CreateNewLeadPage createLead = pageObjects.getCreateNewLeadPage();
+		NewLeadDetailsPage newLead = pageObjects.getNewLeadDetailsPage();
+				
 		home.clickLeads();
 		soft.assertEquals(lead.getPageHeader(), "Leads");
 		lead.clickPlusButton();
