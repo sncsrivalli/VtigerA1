@@ -22,6 +22,7 @@ import pomPages.NewEventDetailsPage;
 import pomPages.NewLeadDetailsPage;
 import pomPages.NewOrgDetailsPage;
 import pomPages.OrganizationsPage;
+import pomPages.PageObjectManager;
 
 //This is BaseClass
 public class BaseClass {
@@ -42,19 +43,20 @@ public class BaseClass {
 	
 	protected LoginPage login;
 	protected HomePage home;
-	protected OrganizationsPage org;
-	protected ContactsPage contact;
-	protected LeadsPage lead;
-	protected CreateNewOrganizationPage createOrg;
-	protected CreateNewContactPage createContact;
-	protected CreateNewLeadPage createLead;
-	protected CreateNewEventPage createEvent;
-	protected DuplicatingLeadPage duplicateLead;
-	protected NewOrgDetailsPage newOrg;
-	protected NewContactDetailsPage newContact;
-	protected NewLeadDetailsPage newLead;
-	protected NewEventDetailsPage newEvent;
+//	protected OrganizationsPage org;
+//	protected ContactsPage contact;
+//	protected LeadsPage lead;
+//	protected CreateNewOrganizationPage createOrg;
+//	protected CreateNewContactPage createContact;
+//	protected CreateNewLeadPage createLead;
+//	protected CreateNewEventPage createEvent;
+//	protected DuplicatingLeadPage duplicateLead;
+//	protected NewOrgDetailsPage newOrg;
+//	protected NewContactDetailsPage newContact;
+//	protected NewLeadDetailsPage newLead;
+//	protected NewEventDetailsPage newEvent;
 	
+	protected PageObjectManager pageObjects;
 	
 	@BeforeClass
 	public void classSetup() {
@@ -74,23 +76,28 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void methodSetup() {
-		login = new LoginPage(driver);
-		home = new HomePage(driver);
-		org = new OrganizationsPage(driver);
-		contact = new ContactsPage(driver);
-		lead = new LeadsPage(driver);
-		createOrg = new CreateNewOrganizationPage(driver);
-		createContact = new CreateNewContactPage(driver);
-		createLead = new CreateNewLeadPage(driver);
-		createEvent = new CreateNewEventPage(driver);
-		newOrg = new NewOrgDetailsPage(driver);
-		newContact = new NewContactDetailsPage(driver);
-		newLead = new NewLeadDetailsPage(driver);
-		newEvent = new NewEventDetailsPage(driver);
-		duplicateLead = new DuplicatingLeadPage(driver);
+//		login = new LoginPage(driver);
+//		home = new HomePage(driver);
+//		org = new OrganizationsPage(driver);
+//		contact = new ContactsPage(driver);
+//		lead = new LeadsPage(driver);
+//		createOrg = new CreateNewOrganizationPage(driver);
+//		createContact = new CreateNewContactPage(driver);
+//		createLead = new CreateNewLeadPage(driver);
+//		createEvent = new CreateNewEventPage(driver);
+//		newOrg = new NewOrgDetailsPage(driver);
+//		newContact = new NewContactDetailsPage(driver);
+//		newLead = new NewLeadDetailsPage(driver);
+//		newEvent = new NewEventDetailsPage(driver);
+//		duplicateLead = new DuplicatingLeadPage(driver);
+		
+		pageObjects = new PageObjectManager(driver);
 		soft = new SoftAssert();
 		
 		excel.excelInit(IConstantPath.EXCEL_PATH);
+		
+		login = pageObjects.getLoginPage();
+		home = pageObjects.getHomePage();
 		
 		web.navigateToApp(property.readFromProperties("url"));
 		Assert.assertEquals(login.getPageHeader(), "vtiger");
