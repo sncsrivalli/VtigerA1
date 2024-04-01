@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumgrid.PracticeTest">
+      <class name="testScripts.CreateNewEventTest">
         <methods>
-          <include name="demoTest"/>
+          <include name="createEventTest"/>
         </methods>
-      </class> <!-- seleniumgrid.PracticeTest -->
+      </class> <!-- testScripts.CreateNewEventTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

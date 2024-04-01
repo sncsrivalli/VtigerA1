@@ -8,20 +8,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.asserts.SoftAssert;
 
-import pomPages.ContactsPage;
-import pomPages.CreateNewContactPage;
-import pomPages.CreateNewEventPage;
-import pomPages.CreateNewLeadPage;
-import pomPages.CreateNewOrganizationPage;
-import pomPages.DuplicatingLeadPage;
 import pomPages.HomePage;
-import pomPages.LeadsPage;
 import pomPages.LoginPage;
-import pomPages.NewContactDetailsPage;
-import pomPages.NewEventDetailsPage;
-import pomPages.NewLeadDetailsPage;
-import pomPages.NewOrgDetailsPage;
-import pomPages.OrganizationsPage;
 import pomPages.PageObjectManager;
 
 //This is BaseClass
@@ -43,19 +31,7 @@ public class BaseClass {
 	
 	protected LoginPage login;
 	protected HomePage home;
-//	protected OrganizationsPage org;
-//	protected ContactsPage contact;
-//	protected LeadsPage lead;
-//	protected CreateNewOrganizationPage createOrg;
-//	protected CreateNewContactPage createContact;
-//	protected CreateNewLeadPage createLead;
-//	protected CreateNewEventPage createEvent;
-//	protected DuplicatingLeadPage duplicateLead;
-//	protected NewOrgDetailsPage newOrg;
-//	protected NewContactDetailsPage newContact;
-//	protected NewLeadDetailsPage newLead;
-//	protected NewEventDetailsPage newEvent;
-	
+
 	protected PageObjectManager pageObjects;
 	
 	@BeforeClass
@@ -76,21 +52,7 @@ public class BaseClass {
 	
 	@BeforeMethod
 	public void methodSetup() {
-//		login = new LoginPage(driver);
-//		home = new HomePage(driver);
-//		org = new OrganizationsPage(driver);
-//		contact = new ContactsPage(driver);
-//		lead = new LeadsPage(driver);
-//		createOrg = new CreateNewOrganizationPage(driver);
-//		createContact = new CreateNewContactPage(driver);
-//		createLead = new CreateNewLeadPage(driver);
-//		createEvent = new CreateNewEventPage(driver);
-//		newOrg = new NewOrgDetailsPage(driver);
-//		newContact = new NewContactDetailsPage(driver);
-//		newLead = new NewLeadDetailsPage(driver);
-//		newEvent = new NewEventDetailsPage(driver);
-//		duplicateLead = new DuplicatingLeadPage(driver);
-		
+
 		pageObjects = new PageObjectManager(driver);
 		soft = new SoftAssert();
 		
